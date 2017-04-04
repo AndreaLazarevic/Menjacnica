@@ -14,15 +14,11 @@ public class Menjacnica implements MenjacnicaInterfejs {
 		for (int i = 0; i < valute.size(); i++) {
 			if(valute.get(i).getOznakaValute().equals(oznakaValute)){
 				Kurs k = new Kurs();
-				GregorianCalendar d = datum;
-				double pk = prodajniKurs;
-				double sk = srednjiKurs;
-				double kk = kupovniKurs;
 				
-				k.setDatum(d);
-				k.setProdajniKurs(pk);
-				k.setSrednjiKurs(sk);
-				k.setKupovniKurs(kk);
+				k.setDatum(datum);
+				k.setProdajniKurs(prodajniKurs);
+				k.setSrednjiKurs(srednjiKurs);
+				k.setKupovniKurs(kupovniKurs);
 				
 				valute.get(i).getKursevi().add(k);
 			}
