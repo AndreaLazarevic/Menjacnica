@@ -1,7 +1,5 @@
 package menjacnica;
 
-import Valuta;
-
 import java.util.LinkedList;
 
 public class Valuta {
