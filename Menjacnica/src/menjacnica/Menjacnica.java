@@ -28,13 +28,25 @@ public class Menjacnica implements MenjacnicaInterfejs {
 
 	@Override
 	public void obrisiKursValuteNaDan(String oznakaValute, GregorianCalendar datum) {
-		// TODO Auto-generated method stub
-
+		for (int i = 0; i < valute.size(); i++) {
+			if(valute.get(i).getOznakaValute().equals(oznakaValute) &&
+					valute.get(i).getKursevi().get(i).getDatum().equals(datum)){
+				
+				valute.get(i).getKursevi().remove(i);
+			}	
+		}
 	}
 
 	@Override
 	public double pronadjiIVratiKursValuteNaDan(String oznakaValute, GregorianCalendar datum) {
-		// TODO Auto-generated method stub
+		for (int i = 0; i < valute.size(); i++) {
+			if(valute.get(i).getOznakaValute().equals(oznakaValute) &&
+					valute.get(i).getKursevi().get(i).getDatum().equals(datum)){
+				
+				return valute.get(i).getKursevi().get(i).getSrednjiKurs();
+			}	
+		}
+		
 		return 0;
 	}
 
