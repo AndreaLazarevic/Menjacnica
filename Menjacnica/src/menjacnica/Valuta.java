@@ -1,7 +1,5 @@
 package menjacnica;
 
-import Valuta;
-
 import java.util.LinkedList;
 
 public class Valuta {
@@ -14,6 +12,8 @@ public class Valuta {
 	}
 	
 	public void setNazivValute(String nazivValute) {
+		if(nazivValute == null)
+			throw new RuntimeException("Naziv valute ne sme biti null string!");
 		this.nazivValute = nazivValute;
 	}
 	
@@ -22,6 +22,8 @@ public class Valuta {
 	}
 	
 	public void setOznakaValute(String oznakaValute) {
+		if(oznakaValute == null)
+			throw new RuntimeException("Oznaka valute ne sme biti null string!");
 		this.oznakaValute = oznakaValute;
 	}
 	
@@ -32,6 +34,7 @@ public class Valuta {
 	public void setKursevi(LinkedList<Kurs> kursevi) {
 		this.kursevi = kursevi;
 	}
+
 	
 
 	@Override
